@@ -5,7 +5,7 @@ API_TESTS_PATH ?= ../r7
 .PHONY: help check-repos up seed down clean ps logs build test-e2e test-api test-all
 
 help:
-	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-12s %s\n", $$1, $$2}'
+	@grep -E '^[a-z0-9-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-12s %s\n", $$1, $$2}'
 
 check-repos: ## Check the sibling repos are checked out
 	@./scripts/check-repos.sh

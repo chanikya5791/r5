@@ -54,6 +54,9 @@ shared `JWT_SECRET`.
 
 ## Quick start
 
+> Full guide, covering local development with hot reload, checking the stack, resetting data, configuration and troubleshooting:
+> **[docs/running-the-services.md](docs/running-the-services.md)**
+
 Requirements: Docker with Compose v2, `make`, Node 22 (for running the tests).
 
 ```bash
