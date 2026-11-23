@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: docker-compose.yml is valid
+        run: docker compose config --quiet
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Playwright tests type-check
+        working-directory: e2e
+        run: npm ci && npx tsc --noEmit
