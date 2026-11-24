@@ -30,7 +30,7 @@ All seven repos must sit **side by side** in one folder, because docker-compose 
 ```bash
 mkdir shoplite && cd shoplite
 for r in r1 r2 r3 r4 r5 r6 r7; do
-  git clone -b ccr-7b98c79f-jzysu6 https://github.com/chanikya5791/$r
+  git clone -b main https://github.com/chanikya5791/$r
 done
 ```
 
